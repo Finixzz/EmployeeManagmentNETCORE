@@ -29,6 +29,7 @@ namespace WebApp.Models.Repositories
         {
             Department deptInDb = _context.Departments.SingleOrDefault(d => d.Id == id);
             _context.Departments.Remove(deptInDb);
+            _context.SaveChanges();
             return deptInDb;
         }
 
@@ -36,6 +37,7 @@ namespace WebApp.Models.Repositories
         {
             Department deptInDb = _context.Departments.SingleOrDefault(d => d.Id == id);
             _mapper.Map(department, deptInDb);
+            _context.SaveChanges();
             return deptInDb;
         }
 
