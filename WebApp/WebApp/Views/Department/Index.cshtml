@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebApp.Models.Department>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@{
+    var Departments = Model;
+    <div class="departments">
+        <table id="departmentTable" class="table table-bordered table-hover" style=" border:1px solid black;">
+            <thead>
+                <tr><td style="background-color:gray;color:white;font-weight:bold;">Departments</td></tr>
+                <tr>
+                    <td style="background-color:rgba(134, 133, 133,0.3)">Department Name</td>
+                    <td style="background-color:rgba(134, 133, 133,0.3)">Department Group Name</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var dept in Departments)
+                {
+                    <tr>
+                        <td>@dept.Name</td>
+                        <td>@dept.GroupName</td>
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+    </div>
+}
+
+@section scripts
+{  
+    <script>
+        $(document).ready(function () {
+            $("#departmentTable").DataTable();
+        });
+    </script>
+}
+
