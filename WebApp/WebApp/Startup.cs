@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WebApp.AutoMapper;
 using WebApp.DbContext;
+using WebApp.Models.Interfaces;
+using WebApp.Models.Repositories;
 
 namespace WebApp
 {
@@ -29,13 +31,17 @@ namespace WebApp
         {
             services.AddDbContextPool<ApplicationDbContext>(
                 options => options.UseSqlServer(Configuration.GetConnectionString("EmployeeManagmentNETCORE")));
-            services.AddRazorPages();
             var mappingConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new MappingProfile());
             });
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
+            services.AddScoped<IEmployeeRepository, SQLEmployeeRepository>();
+
+
+            services.AddRazorPages();
+
 
         }
 
