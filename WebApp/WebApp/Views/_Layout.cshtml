@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <environment include="Development">
-        <link href="~/css/site.css" rel="stylesheet" />
         <script src="~/jquery/jquery.js"></script>
         <script src="~/jquery-validation/jquery.validate.js"></script>
         <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
     </environment>
+    <link href="~/datatables/css/jquery.dataTables.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+
 </head>
 <body>
     <nav>
@@ -17,9 +19,9 @@
             <img width="40" src="https://cdn2.iconfinder.com/data/icons/color-svg-vector-icons-2/512/users_group_people_friends-512.png" />
         </div>
         <ul id="nav-links" class="nav-links">
-            <li><a href="">Home</a></li>
-            <li><a href="">Employees</a></li>
-            <li><a href="">Departments</a></li>
+            <li><a asp-action="" asp-controller="">Home</a></li>
+            <li><a asp-action="" asp-controller="">Employees</a></li>
+            <li><a asp-action="index" asp-controller="department">Departments</a></li>
         </ul>
 
         <div class="toggle-button">
@@ -31,10 +33,14 @@
     <div>
         @RenderBody()
     </div>
+    <script src="~/jquery/jquery.js"></script>
+    <script src="~/datatables/js/jquery.dataTables.js"></script>
     @RenderSection("Scripts", required: false)
+
+
 </body>
 </html>
-<script src="~/jquery/jquery.js"></script>
+
 <script>
     $(document).ready(function () {
         $(".toggle-button").on("click", function () {

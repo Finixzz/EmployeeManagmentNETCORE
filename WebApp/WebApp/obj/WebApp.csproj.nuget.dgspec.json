@@ -64,6 +64,10 @@
             "automapper": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "datatables.net": {
+              "target": "Package",
+              "version": "[1.10.18, )"
             }
           },
           "imports": [

@@ -19,6 +19,16 @@ nav {
     align-items: center;
     min-height: 8vh;
     background-color: rgba(94, 118, 133,0.7);
+    margin-bottom:10vh;
+}
+
+.logo {
+    color: white;
+    text-transform: uppercase;
+    /* razmak izmedu slova */
+    letter-spacing: 5px;
+    font-size: 20px;
+
 }
 
 .nav-links {
@@ -40,7 +50,7 @@ nav {
     }
 
         .nav-links a:hover {
-            color: rgb(190, 198, 203);
+            color: rgb(124, 156, 175);
         }
 
 .toggle-button {
@@ -54,28 +64,40 @@ nav {
         margin: 5px;
         transition: all 0.3s ease;
     }
-
+#departmentTable td {
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.departments{
+    width:70%;
+    margin-left:auto;
+    margin-right:auto;
+    
+}
 /*Mobile part*/
 @media screen and (max-width:768px) {
     body {
-        overflow-x: hidden;
         cursor: pointer;
     }
-
+    nav{
+        margin-bottom:20vh;
+    }
     .nav-links {
         position: absolute;
         right: 0px;
         /*visina*/
-        height: 92vh;
+        height: 20vh;
         /*mjesto na kojem se nalaze*/
         top: 8vh;
         background-color: rgba(94, 118, 133,0.7);
-        width: 50%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        transform: translateX(100%);
+        transform: translateY(-140%);
         transition: transform 0.5s ease-out;
+    }
+    .departments {
+        margin-bottom: 20vh;
     }
 
     .toggle-button {
@@ -84,7 +106,7 @@ nav {
 
 
     .nav-active {
-        transform: translateX(0%)
+        transform: translateY(0%)
     }
 
     .toggle .line1 {
