@@ -105,6 +105,7 @@ nav {
     }
     nav{
         margin-bottom:20vh;
+        align-items:center;
     }
     .nav-links {
         position: absolute;

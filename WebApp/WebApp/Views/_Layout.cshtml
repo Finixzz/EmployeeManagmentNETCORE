@@ -9,7 +9,10 @@
         <script src="~/jquery-validation/jquery.validate.js"></script>
         <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
     </environment>
+    <!--Datatables css-->
     <link href="~/datatables/css/jquery.dataTables.css" rel="stylesheet" />
+    <!--Bootstrap css-->
+    <link href="~/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
 
 </head>
@@ -35,7 +38,14 @@
     <div>
         @RenderBody()
     </div>
+    <!-- JS dependencies BOOTOX  -->
+    <script src="~/bootbox.js/bootbox.js"></script>
+    <script src="~/bootstrap/js/bootstrap.js"></script>
+
+    <!--Jquery-->
     <script src="~/jquery/jquery.js"></script>
+
+    <!--Datatables jquery-->
     <script src="~/datatables/js/jquery.dataTables.js"></script>
     @RenderSection("Scripts", required: false)
 

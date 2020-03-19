@@ -10,7 +10,6 @@
       "library": "jquery-validate@1.19.1",
       "destination": "wwwroot/jquery-validation/"
     },
-
     {
       "library": "jquery-validation-unobtrusive@3.2.11",
       "destination": "wwwroot/jquery-validation-unobtrusive/"
@@ -18,6 +17,14 @@
     {
       "library": "datatables@1.10.20",
       "destination": "wwwroot/datatables"
+    },
+    {
+      "library": "bootbox.js@5.4.0",
+      "destination": "wwwroot/bootbox.js/"
+    },
+    {
+      "library": "twitter-bootstrap@4.4.1",
+      "destination": "wwwroot/bootstrap/"
     }
   ]
 }
