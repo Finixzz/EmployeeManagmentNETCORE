@@ -12,6 +12,9 @@ body {
     overflow-x: hidden;
     cursor: pointer;
 }
+.text-danger {
+    color: rgba(255,0,0,0.8);
+}
 
 nav {
     display: flex;
@@ -25,9 +28,8 @@ nav {
 .logo {
     color: white;
     text-transform: uppercase;
-    /* razmak izmedu slova */
-    letter-spacing: 5px;
     font-size: 20px;
+    z-index:1;
 
 }
 
@@ -35,6 +37,7 @@ nav {
     display: flex;
     justify-content: space-around;
     width: 40%;
+    padding-top:10px;
 }
 
     .nav-links li {
@@ -98,6 +101,27 @@ nav {
 .d-container {
     padding: 2px 16px;
 }
+.btn {
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #26a69a;
+    
+    padding: 10px 40px;
+    cursor: pointer;
+    text-transform:uppercase;
+}
+.btn:hover {
+     background-color: #4db6ac;
+     color: #FFFFFF;
+}
+
+a {
+    color: #26a69a;
+}
+    a:hover {
+        color: #009688;
+    }
 /*Mobile part*/
 @media screen and (max-width:768px) {
     body {
@@ -106,6 +130,7 @@ nav {
     nav{
         margin-bottom:20vh;
         align-items:center;
+        background-color:transparent;
     }
     .nav-links {
         position: absolute;
@@ -121,6 +146,10 @@ nav {
         align-items: center;
         transform: translateY(-140%);
         transition: transform 0.5s ease-out;
+        padding:0;
+    }
+    .toggle-button div {
+        background-color: rgb(94, 118, 133);
     }
     .departments {
         margin-bottom: 20vh;
@@ -129,11 +158,15 @@ nav {
     .toggle-button {
         display: block;
     }
-
+    .change-color div{
+        background-color:white;
+    }
 
     .nav-active {
-        transform: translateY(0%)
+        transform: translateY(-40%);
+        
     }
+   
 
     .toggle .line1 {
         transform: rotate(-45deg) translate(-4px,5px);
