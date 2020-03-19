@@ -6,9 +6,13 @@
 @{
     var department = Model;
     <div class="d-card">
+        <button class="btn" style="position:absolute; margin-top:5vh; left:25%;"
+                onclick="window.location.href='/department'">
+            <bold>&larr;</bold>
+        </button>
         <img src="https://cdn.pixabay.com/photo/2015/05/15/14/22/conference-room-768441_1280.jpg" alt="Avatar" style="width:100%; height:50vh;">
         <div class="d-container">
-            <p style="text-align:center;"><strong>Department ID:</strong> @department.Id</p>
+            <p style="text-align:center; color:white; background-color: #26a69a;margin-top:-4.5%; margin-left: 25%;margin-right:25%; padding:5px 5px;"><strong>DepartmentID:  @department.Id</strong></p>
             
             <p style="margin:10px 0;"><strong>Department name:</strong> @department.Name</p>
             

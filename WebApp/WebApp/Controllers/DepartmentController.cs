@@ -31,6 +31,20 @@ namespace WebApp.Controllers
             return View(department);
         }
 
+        public IActionResult New()
+        {
+            Department department = new Department();
+            return View(department);
+        }
         
+        [HttpPost]
+        public IActionResult Save(Department department)
+        {
+            ModelState.Remove("department.Id");
+            if (!ModelState.IsValid)
+                return BadRequest();
+            else 
+                return RedirectToAction( "Details" , new { id = _departmentRepository.CreateDepartment(department).Id } );
+        }
     }
 }
