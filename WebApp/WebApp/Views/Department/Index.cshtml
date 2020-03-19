@@ -12,6 +12,7 @@
                 <tr>
                     <td style="background-color:rgba(134, 133, 133,0.3)">Department Name</td>
                     <td style="background-color:rgba(134, 133, 133,0.3)">Department Group Name</td>
+                    <td style="background-color:rgba(134, 133, 133,0.3)">ACTION</td>
                 </tr>
             </thead>
             <tbody>
@@ -20,6 +21,11 @@
                     <tr>
                         <td>@dept.Name</td>
                         <td>@dept.GroupName</td>
+                        <td class="table-action">
+                            <a asp-action="details" asp-controller="department" asp-route-id="@dept.Id">Details</a>
+                            <a class="edit" asp-action="" asp-controller="">Edit</a>
+                            <a asp-action="" asp-controller="">Delete</a>
+                        </td>
                     </tr>
 
                 }

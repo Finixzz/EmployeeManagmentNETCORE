@@ -1,0 +1,23 @@
+﻿@model WebApp.Models.Department
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/_Layout.cshtml";
+}
+@{
+    var department = Model;
+    <div class="d-card">
+        <img src="https://cdn.pixabay.com/photo/2015/05/15/14/22/conference-room-768441_1280.jpg" alt="Avatar" style="width:100%; height:50vh;">
+        <div class="d-container">
+            <p style="text-align:center;"><strong>Department ID:</strong> @department.Id</p>
+            
+            <p style="margin:10px 0;"><strong>Department name:</strong> @department.Name</p>
+            
+            <p style="margin:10px 0;"><strong>Department group name:</strong> @department.GroupName</p>
+            
+            <p style="margin:10px 0;"><strong>Description:</strong>
+            Donec finibus sollicitudin risus, vitae placerat dui pulvinar nec. Vestibulum finibus ipsum vel felis placerat aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam ipsum nisi, dignissim id ligula at, fermentum vestibulum quam. Praesent dolor dolor, rhoncus non semper in, rutrum sit amet urna. Sed sollicitudin nisl vel leo vehicula, sed malesuada est mattis. Proin rutrum risus a nibh cursus, quis mollis tortor lacinia. Aliquam lorem purus, consequat pulvinar metus ut, sollicitudin vulputate nisi. Nunc cursus, mi id venenatis feugiat, eros ante ultricies quam, a interdum mi ligula a augue. Curabitur non magna vel neque feugiat tincidunt non ut lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet porta sapien, vel tempor ante. Praesent rutrum condimentum purus, sagittis tempor tortor posuere sit amet. Aliquam facilisis mi eros, in tristique eros faucibus in.</p>
+        </div>
+    </div>
+}
+
+

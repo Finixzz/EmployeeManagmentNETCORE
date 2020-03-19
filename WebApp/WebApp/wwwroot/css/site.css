@@ -73,6 +73,31 @@ nav {
     margin-right:auto;
     
 }
+#departmentTable .table-action{
+    text-align:center;
+}
+#departmentTable .edit{
+    margin:0 5px;
+}
+
+.d-card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin: 5% auto;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.d-card:hover {
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+.d-container {
+    padding: 2px 16px;
+}
 /*Mobile part*/
 @media screen and (max-width:768px) {
     body {
@@ -119,5 +144,10 @@ nav {
 
     .toggle .line3 {
         transform: rotate(45deg) translate(-4px,-5px);
+    }
+    .d-card{
+        width:80%;
+        height:5vh;
+        margin-bottom:5%;
     }
 }
