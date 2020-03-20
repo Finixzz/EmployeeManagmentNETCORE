@@ -22,7 +22,7 @@ nav {
     align-items: center;
     min-height: 8vh;
     background-color: rgba(94, 118, 133,0.7);
-    margin-bottom:10vh;
+    margin-bottom:5vh;
 }
 
 .logo {
@@ -153,6 +153,10 @@ a {
     }
     .departments {
         margin-bottom: 20vh;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align:center;
     }
 
     .toggle-button {
@@ -183,5 +187,15 @@ a {
         width:80%;
         height:5vh;
         margin-bottom:5%;
+    }
+}
+
+@media screen and (max-width:450px){
+    .departments {
+        margin-bottom: 20vh;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
 }
