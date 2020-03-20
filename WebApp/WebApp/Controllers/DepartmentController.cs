@@ -43,8 +43,28 @@ namespace WebApp.Controllers
             ModelState.Remove("department.Id");
             if (!ModelState.IsValid)
                 return BadRequest();
-            else 
-                return RedirectToAction( "Details" , new { id = _departmentRepository.CreateDepartment(department).Id } );
+            else
+            {
+                if (department.Id == 0)
+                {
+                    return RedirectToAction("Details", new { id = _departmentRepository.CreateDepartment(department).Id });
+                }
+                else
+                {
+
+                    return RedirectToAction("Details", new { id = _departmentRepository.EditDepartment(department,department.Id).Id });
+                }
+            }
+        }
+
+        public IActionResult Edit(int id)
+        {
+            Department departmentInDb = _departmentRepository.GetDepartment(id);
+            if (departmentInDb == null)
+                return NotFound();
+
+            return View(departmentInDb);
+
         }
     }
 }

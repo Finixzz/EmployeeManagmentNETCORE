@@ -36,7 +36,8 @@ namespace WebApp.Models.Repositories
         public Department EditDepartment(Department department, int id)
         {
             Department deptInDb = _context.Departments.SingleOrDefault(d => d.Id == id);
-            _mapper.Map(department, deptInDb);
+            deptInDb.Name = department.Name;
+            deptInDb.GroupName = department.GroupName;
             _context.SaveChanges();
             return deptInDb;
         }
