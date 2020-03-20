@@ -16,6 +16,7 @@ namespace WebApp.Models
 
         [Required]
         [StringLength(100)]
+        [Display(Name="Group name")]
         public string GroupName { get; set; }
     }
 }
