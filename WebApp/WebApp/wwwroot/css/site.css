@@ -67,20 +67,19 @@ nav {
         margin: 5px;
         transition: all 0.3s ease;
     }
-#departmentTable td {
+.webApp-table td {
     border: 1px solid rgba(0,0,0,0.1);
 }
-.departments{
-    width:70%;
-    margin-left:auto;
-    margin-right:auto;
-    
+.webApp-table {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
-#departmentTable .table-action{
-    text-align:center;
-}
-#departmentTable .edit{
-    margin:0 5px;
+.webApp-table .table-action {
+        text-align: center;
+    }
+.webApp-table .edit {
+    margin: 0 5px;
 }
 
 .d-card {
@@ -101,6 +100,7 @@ nav {
 .d-container {
     padding: 2px 16px;
 }
+
 .btn {
     font-size: 14px;
     font-weight: bold;
@@ -122,6 +122,10 @@ a {
     a:hover {
         color: #009688;
     }
+
+form {
+    width: 60vh;
+}
 /*Mobile part*/
 @media screen and (max-width:768px) {
     body {
@@ -132,6 +136,7 @@ a {
         align-items:center;
         background-color:transparent;
     }
+    
     .nav-links {
         position: absolute;
         right: 0px;
@@ -151,12 +156,12 @@ a {
     .toggle-button div {
         background-color: rgb(94, 118, 133);
     }
-    .departments {
+    .webApp-table {
         margin-bottom: 20vh;
         width: 90%;
         margin-left: auto;
         margin-right: auto;
-        text-align:center;
+        text-align: center;
     }
 
     .toggle-button {
@@ -185,17 +190,22 @@ a {
     }
     .d-card{
         width:80%;
-        height:5vh;
-        margin-bottom:5%;
+        margin-bottom:20%;
+    }
+    form {
+        width: 40vh;
     }
 }
 
 @media screen and (max-width:450px){
-    .departments {
+    .webApp-table {
         margin-bottom: 20vh;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+    }
+    form {
+        width: 30vh;
     }
 }

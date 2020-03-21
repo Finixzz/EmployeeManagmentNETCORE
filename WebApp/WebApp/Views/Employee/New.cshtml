@@ -1,0 +1,50 @@
+﻿@model WebApp.ViewModels.EmployeeViewModel
+@{
+    ViewData["Title"] = "New";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@{
+    <div class="d-card">
+        <button class="btn" style="position:absolute; margin-top:5vh; left:25%;"
+                onclick="window.location.href='/employee'">
+            <bold>&larr;</bold>
+        </button>
+        <img src="~/images/employee.svg" alt="Avatar" style="width:100%; height:50vh;">
+        <div class="d-container">
+            <form asp-action="save" asp-controller="employee" method="post" style="padding:30px 0;">
+                <div class="form-group">
+                    <label asp-for="@Model.Employee.FirstName">First name</label>
+                    <input asp-for="@Model.Employee.FirstName" type="text" value="" class="form-control"  />
+                    <span asp-validation-for="@Model.Employee.FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.Employee.LastName">Last name</label>
+                    <input asp-for="@Model.Employee.LastName" type="text" value="" class="form-control"/>
+                    <span asp-validation-for="@Model.Employee.LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.Employee.Email">Email</label>
+                    <input asp-for="@Model.Employee.Email" type="text" value="" class="form-control" />
+                    <span asp-validation-for="@Model.Employee.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.Employee.DepartmentId"></label>
+                    <select class="form-control" asp-for="@Model.Employee.DepartmentId">
+                        <option value="">Select department</option>
+                        @foreach (var dept in Model.Departments)
+                        {
+                            <option value="@dept.Id">@dept.Name</option>
+                        }
+                    </select>
+                    <span asp-validation-for="@Model.Employee.DepartmentId" class="text-danger"></span>
+                </div>
+                
+                <button class="btn" style="width:100%;">SAVE</button>
+                <input asp-for="@Model.Employee.Id" type="hidden" name="name" value="@Model.Employee.Id" />
+            </form>
+
+        </div>
+    </div>
+}
+

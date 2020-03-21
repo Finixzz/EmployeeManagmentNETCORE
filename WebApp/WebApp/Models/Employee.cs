@@ -10,19 +10,20 @@ namespace WebApp.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "The First name field is required")]
         [StringLength(50)]
         public string FirstName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "The Last name field is required")]
         [StringLength(100)]
         public string LastName { get; set; }
 
-        [Required(ErrorMessage = "The email address is required")]
+        [Required(ErrorMessage = "The email address field is required")]
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage  = "The department field is required")]
+        [Display(Name = "Department")]
         public int DepartmentId { get; set; }
 
         public Department Department { get; set; }

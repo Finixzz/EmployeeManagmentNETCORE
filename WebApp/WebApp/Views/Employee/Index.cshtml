@@ -1,8 +1,64 @@
-﻿
+﻿@model IEnumerable<WebApp.Models.Employee>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+@{
+    var Employees = Model;
+
+    <div class="webApp-table">
+        <button class="btn" style="margin-bottom:2%;" onclick="window.location.href='/employee/new'">Add new employee</button>
+        <table id="employeeTable" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <td style="background-color:rgba(134, 133, 133,0.3)">First Name</td>
+                    <td style="background-color:rgba(134, 133, 133,0.3)">Last Name</td>
+                    <td style="background-color:rgba(134, 133, 133,0.3)">ACTION</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var emp in Employees)
+                {
+                    <tr id="">
+                        <td>@emp.FirstName</td>
+                        <td>@emp.LastName</td>
+                        <td class="table-action">
+                            <a asp-action="details" asp-controller="employee" asp-route-id="@emp.Id">Details</a>
+                            <a class="edit" asp-action="" asp-controller="" asp-route-id="@emp.Id">Edit</a>
+                            <a class="delete" href="#" onclick="deleteEmployee(@emp.Id)">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+}
+
+@section scripts{
+    <script>
+         function deleteEmployee(employeeID){  
+                 bootbox.confirm({
+                     message: "Are you sure you want to delete this employee?",
+                     size: "xl",
+                     callback: function (result) {
+                         if (result) {
+                             $.ajax({
+                                 url: "/api/employees/" + employeeID,
+                                 method: "DELETE",
+                                 success: function () {
+                                     location.href = "/employee";
+                                 }
+                             });
+                         }
+                     }
+                 });   
+         }
+
+         $(document).ready(function () {
+             $("#employeeTable").DataTable();
+         });
+    </script>
+}
 

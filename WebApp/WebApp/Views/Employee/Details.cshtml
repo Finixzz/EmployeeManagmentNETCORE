@@ -1,0 +1,29 @@
+﻿@model WebApp.ViewModels.EmployeeViewModel
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@{
+    var employee = Model;
+<div class="d-card">
+    <button class="btn" style="position:absolute; margin-top:5vh; left:25%;"
+            onclick="window.location.href='/department'">
+        <bold>&larr;</bold>
+    </button>
+    <img src="~/images/employee.svg" alt="Avatar" style="width:100%; height:50vh;">
+    <div class="d-container">
+        <p style="text-align:center; color:white; background-color: #26a69a;"><strong>EmployeeID:  @employee.Employee.Id</strong></p>
+
+        <p style="margin:10px 0;"><strong>First name:</strong> @employee.Employee.FirstName</p>
+
+        <p style="margin:10px 0;"><strong>Last name:</strong> @employee.Employee.LastName</p>
+
+        <p style="margin:10px 0;"><strong>Email:</strong> @employee.Employee.Email</p>
+
+        <p style="margin:10px 0;"><strong>Department: </strong> @employee.Employee.Department.Name</p>
+
+    </div>
+</div>
+ }
+
