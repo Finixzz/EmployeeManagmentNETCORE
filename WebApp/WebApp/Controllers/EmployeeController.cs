@@ -40,7 +40,15 @@ namespace WebApp.Controllers
         }
 
         
-       
+        [HttpPost]
+        public IActionResult Save(Employee employee)
+        {
+            ModelState.Remove("employee.Id");
+            if (!ModelState.IsValid)
+                return BadRequest();
+
+            return RedirectToAction("Details", new { id = _employeeRepository.CreateEmployee(employee).Id });
+        }
         public IActionResult Details(int id)
         {
             Employee empInDb = _employeeRepository.GetEmployee(id);
