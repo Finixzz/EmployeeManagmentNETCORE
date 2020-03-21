@@ -83,7 +83,7 @@ namespace WebApp.Api
         }
 
         //DELETE /api/employees/1
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteEmployee(int id)
         {
             Employee empInDb = _employeeRepository.GetEmployee(id);
