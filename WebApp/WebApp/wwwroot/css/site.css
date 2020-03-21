@@ -124,9 +124,7 @@ a {
         color: #009688;
     }
 
-form {
-    width: 60vh;
-}
+
 /*Mobile part*/
 @media screen and (max-width:768px) {
     body {
@@ -193,9 +191,7 @@ form {
         width:80%;
         margin-bottom:20%;
     }
-    form {
-        width: 40vh;
-    }
+    
 }
 
 @media screen and (max-width:450px){

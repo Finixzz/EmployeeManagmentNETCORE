@@ -36,7 +36,10 @@ namespace WebApp.Models.Repositories
         public Employee EditEmployee(Employee employee, int id)
         {
             Employee empInDb = _context.Employees.SingleOrDefault(e => e.Id == id);
-            _mapper.Map(employee, empInDb);
+            empInDb.FirstName = employee.FirstName;
+            empInDb.LastName = employee.LastName;
+            empInDb.Email = employee.Email;
+            empInDb.DepartmentId = employee.DepartmentId;
             _context.SaveChanges();
             return empInDb;
         }

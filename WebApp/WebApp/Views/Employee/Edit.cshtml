@@ -1,6 +1,6 @@
 ﻿@model WebApp.ViewModels.EmployeeViewModel
 @{
-    ViewData["Title"] = "New";
+    ViewData["Title"] = "Edit";
     Layout = "~/Views/_Layout.cshtml";
 }
 
@@ -15,17 +15,17 @@
             <form asp-action="save" asp-controller="employee" method="post" style="padding:30px 0;">
                 <div class="form-group">
                     <label asp-for="@Model.Employee.FirstName">First name</label>
-                    <input asp-for="@Model.Employee.FirstName" type="text" value="" class="form-control" />
+                    <input asp-for="@Model.Employee.FirstName" type="text" value="@Model.Employee.FirstName" class="form-control" />
                     <span asp-validation-for="@Model.Employee.FirstName" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="@Model.Employee.LastName">Last name</label>
-                    <input asp-for="@Model.Employee.LastName" type="text" value="" class="form-control" />
+                    <input asp-for="@Model.Employee.LastName" type="text" value="@Model.Employee.LastName" class="form-control" />
                     <span asp-validation-for="@Model.Employee.LastName" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="@Model.Employee.Email">Email</label>
-                    <input asp-for="@Model.Employee.Email" type="text" value="" class="form-control" />
+                    <input asp-for="@Model.Employee.Email" type="text" value="@Model.Employee.Email" class="form-control" />
                     <span asp-validation-for="@Model.Employee.Email" class="text-danger"></span>
                 </div>
                 <div class="form-group">
@@ -40,7 +40,7 @@
                     <span asp-validation-for="@Model.Employee.DepartmentId" class="text-danger"></span>
                 </div>
 
-                <input asp-for="@Model.Employee.Id" type="hidden" name="name" value="@Model.Employee.Id" />
+                <input asp-for="@Model.Employee.Id" type="hidden" value="@Model.Employee.Id" />
 
                 <button class="btn" style="width:100%;">SAVE</button>
 
@@ -49,4 +49,5 @@
         </div>
     </div>
 }
+
 

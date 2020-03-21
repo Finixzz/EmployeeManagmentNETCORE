@@ -47,7 +47,11 @@ namespace WebApp.Controllers
             if (!ModelState.IsValid)
                 return BadRequest();
 
-            return RedirectToAction("Details", new { id = _employeeRepository.CreateEmployee(employee).Id });
+            if (employee.Id == 0)
+                return RedirectToAction("Details", new { id = _employeeRepository.CreateEmployee(employee).Id });           
+            else
+                return RedirectToAction("Details", new { id = _employeeRepository.EditEmployee(employee,employee.Id).Id});
+            
         }
         public IActionResult Details(int id)
         {
@@ -61,6 +65,20 @@ namespace WebApp.Controllers
                 Departments = _departmentRepository.GetDepartments().ToList()
             };
             return View(empViewModel);  
+        }
+
+        public IActionResult Edit(int id)
+        {
+            Employee empInDb = _employeeRepository.GetEmployee(id);
+            if (empInDb == null)
+                return NotFound();
+
+            EmployeeViewModel employeeViewModel = new EmployeeViewModel()
+            {
+                Employee = empInDb,
+                Departments = _departmentRepository.GetDepartments().ToList()
+            };
+            return View(employeeViewModel);
         }
     }
 }

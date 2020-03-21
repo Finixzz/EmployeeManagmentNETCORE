@@ -25,7 +25,7 @@
                         <td>@emp.LastName</td>
                         <td class="table-action">
                             <a asp-action="details" asp-controller="employee" asp-route-id="@emp.Id">Details</a>
-                            <a class="edit" asp-action="" asp-controller="" asp-route-id="@emp.Id">Edit</a>
+                            <a class="edit" asp-action="edit" asp-controller="employee" asp-route-id="@emp.Id">Edit</a>
                             <a class="delete" href="#" onclick="deleteEmployee(@emp.Id)">Delete</a>
                         </td>
                     </tr>
