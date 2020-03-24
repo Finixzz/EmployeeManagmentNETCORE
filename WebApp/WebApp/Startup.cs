@@ -57,6 +57,10 @@ namespace WebApp
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseStatusCodePagesWithRedirects("/Error/{0}");
+            }
 
             app.UseStaticFiles();
             app.UseRouting();

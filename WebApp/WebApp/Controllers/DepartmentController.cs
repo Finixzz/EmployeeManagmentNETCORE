@@ -26,7 +26,7 @@ namespace WebApp.Controllers
         {
             Department department = _departmentRepository.GetDepartment(id);
             if (department == null)
-                return NotFound();
+                return View("404");
 
             return View(department);
         }
@@ -61,7 +61,7 @@ namespace WebApp.Controllers
         {
             Department departmentInDb = _departmentRepository.GetDepartment(id);
             if (departmentInDb == null)
-                return NotFound();
+                return View("404");
 
             return View(departmentInDb);
 

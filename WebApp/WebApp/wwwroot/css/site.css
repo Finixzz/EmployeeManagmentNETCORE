@@ -125,6 +125,20 @@ a {
     }
 
 
+
+p {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 100;
+}
+
+h1 {
+    text-align: center;
+    font-size: 15em;
+    font-weight: 100;
+    text-shadow: #26a69a 1px 1px, #0062cc 2px 2px, #0062cc 3px 3px, #26a69a 4px 4px, #0062cd 5px 5px, #26a69a 6px 6px, #26a69a 7px 7px, #26a69a 8px 8px, #26a69a 9px 9px;
+}
+
 /*Mobile part*/
 @media screen and (max-width:768px) {
     body {

@@ -57,7 +57,7 @@ namespace WebApp.Controllers
         {
             Employee empInDb = _employeeRepository.GetEmployee(id);
             if (empInDb == null)
-                return NotFound();
+                return View("404");
 
             EmployeeViewModel empViewModel = new EmployeeViewModel()
             {
@@ -71,7 +71,7 @@ namespace WebApp.Controllers
         {
             Employee empInDb = _employeeRepository.GetEmployee(id);
             if (empInDb == null)
-                return NotFound();
+                return View("404");
 
             EmployeeViewModel employeeViewModel = new EmployeeViewModel()
             {
