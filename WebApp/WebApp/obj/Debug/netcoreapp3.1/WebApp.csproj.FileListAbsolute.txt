@@ -140,7 +140,6 @@ C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\bin\Debug\net
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Department\Index.cshtml.g.cs
-C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\WebApp.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Department\Details.cshtml.g.cs
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Department\New.cshtml.g.cs
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Department\Edit.cshtml.g.cs
@@ -150,3 +149,4 @@ C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\net
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Edit.cshtml.g.cs
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\_Layout.cshtml.g.cs
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\404.cshtml.g.cs
+C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\WebApp.MvcApplicationPartsAssemblyInfo.cache

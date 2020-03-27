@@ -6,10 +6,12 @@ using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using WebApp.AutoMapper;
 using WebApp.DbContext;
 using WebApp.Models.Interfaces;
@@ -32,7 +34,8 @@ namespace WebApp
 
             services.AddDbContextPool<ApplicationDbContext>(
                 options => options.UseSqlServer(Configuration.GetConnectionString("EmployeeManagmentNETCORE")));
-
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>();
 
             var mappingConfig = new MapperConfiguration(mc =>
             {
@@ -51,10 +54,11 @@ namespace WebApp
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,ILogger<Startup> logger)
         {
             if (env.IsDevelopment())
             {
+                logger.LogInformation("In Development environment");
                 app.UseDeveloperExceptionPage();
             }
             else
@@ -63,7 +67,11 @@ namespace WebApp
             }
 
             app.UseStaticFiles();
+
+            app.UseAuthentication();
+
             app.UseRouting();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("Default", "{controller=Home}/{action=Index}/{id?}");

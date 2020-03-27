@@ -6,6 +6,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApp.DbContext;
 using WebApp.Models.Interfaces;
+
+
 namespace WebApp.Models.Repositories
 {
     public class SQLEmployeeRepository : IEmployeeRepository
@@ -18,6 +20,7 @@ namespace WebApp.Models.Repositories
             _context = context;
             _mapper = mapper;
         }
+
         public Employee CreateEmployee(Employee employee)
         {
             _context.Employees.Add(employee);
