@@ -1,5 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@inject SignInManager<IdentityUser> signInManager;
 
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -27,6 +28,24 @@
             <li><a asp-action="" asp-controller="">Home</a></li>
             <li><a asp-action="index" asp-controller="employee">Employees</a></li>
             <li><a asp-action="index" asp-controller="department">Departments</a></li>
+        </ul>
+        <ul class="nav-links-2">
+            @if (signInManager.IsSignedIn(User))
+            {
+                <li>
+                    <form method="post" asp-controller="account" asp-action="logout" style="display:flex;">  
+                        <button style="background-color:transparent;border:0; color:white;">
+                            Logout @User.Identity.Name
+                        </button>
+                    </form>
+                </li>
+            }
+            else
+            {
+                <li><a asp-action="register" asp-controller="account">Register</a></li>
+                <li><a asp-action="login" asp-controller="account">Login</a></li>
+            }
+
         </ul>
 
         <div class="toggle-button">
