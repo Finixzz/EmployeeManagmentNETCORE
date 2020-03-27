@@ -12,8 +12,15 @@ namespace NetCoreLayout.Pages.Employee
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
+#line 2 "C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c6f3b1fc3411a01b6c36ad25f6edbcc60377b401", @"/Views/Employee/Details.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1aa539568a269c83f65c83b3fa7d494aade033a8", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6a46c485692db25d8cac40e99dcf67c3e5788bcc", @"/Views/_ViewImports.cshtml")]
     public class Views_Employee_Details : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<WebApp.ViewModels.EmployeeViewModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("src", new global::Microsoft.AspNetCore.Html.HtmlString("~/images/employee.svg"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -62,7 +69,7 @@ namespace NetCoreLayout.Pages.Employee
 #line hidden
 #nullable disable
             WriteLiteral("<div class=\"d-card\">\r\n    <button class=\"btn\" style=\"position:absolute; margin-top:5vh; left:25%;\"\r\n            onclick=\"window.location.href=\'/department\'\">\r\n        <bold>&larr;</bold>\r\n    </button>\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "c6f3b1fc3411a01b6c36ad25f6edbcc60377b4014619", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "c6f3b1fc3411a01b6c36ad25f6edbcc60377b4014830", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
