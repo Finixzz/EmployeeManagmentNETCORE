@@ -14,6 +14,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using WebApp.AutoMapper;
 using WebApp.DbContext;
+using WebApp.Models;
 using WebApp.Models.Interfaces;
 using WebApp.Models.Repositories;
 
@@ -34,7 +35,7 @@ namespace WebApp
 
             services.AddDbContextPool<ApplicationDbContext>(
                 options => options.UseSqlServer(Configuration.GetConnectionString("EmployeeManagmentNETCORE")));
-            services.AddIdentity<IdentityUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             var mappingConfig = new MapperConfiguration(mc =>
