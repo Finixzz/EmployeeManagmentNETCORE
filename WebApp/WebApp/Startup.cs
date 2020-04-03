@@ -72,6 +72,8 @@ namespace WebApp
 
             app.UseRouting();
 
+            app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("Default", "{controller=Home}/{action=Index}/{id?}");

@@ -18,42 +18,58 @@
 
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <a asp-action="index" asp-controller="home">
-                <img width="40" src="https://cdn2.iconfinder.com/data/icons/color-svg-vector-icons-2/512/users_group_people_friends-512.png" />
-            </a>
-        </div>
-        <ul id="nav-links" class="nav-links">
-            <li><a asp-action="" asp-controller="">Home</a></li>
-            <li><a asp-action="index" asp-controller="employee">Employees</a></li>
-            <li><a asp-action="index" asp-controller="department">Departments</a></li>
-        </ul>
-        <ul class="nav-links-2">
-            @if (signInManager.IsSignedIn(User))
-            {
+    @if (signInManager.IsSignedIn(User))
+    {
+        <nav>
+            <div class="logo">
+                <a asp-action="index" asp-controller="home">
+                    <img width="40" src="https://cdn2.iconfinder.com/data/icons/color-svg-vector-icons-2/512/users_group_people_friends-512.png" />
+                </a>
+            </div>
+            <ul id="nav-links" class="nav-links">
+                <li><a asp-action="" asp-controller="">Home</a></li>
+                <li><a asp-action="index" asp-controller="employee">Employees</a></li>
+                <li><a asp-action="index" asp-controller="department">Departments</a></li>
+            </ul>
+            <ul class="nav-links-2">
+
                 <li>
-                    <form method="post" asp-controller="account" asp-action="logout" style="display:flex;">  
+                    <form method="post" asp-controller="account" asp-action="logout" style="display:flex;">
                         <button style="background-color:transparent;border:0; color:white;">
                             Logout @User.Identity.Name
                         </button>
                     </form>
                 </li>
-            }
-            else
-            {
+            </ul>
+
+            <div class="toggle-button">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    }
+    else
+    {
+        <nav>
+            <div class="logo">
+                <a asp-action="index" asp-controller="home">
+                    <img width="40" src="https://cdn2.iconfinder.com/data/icons/color-svg-vector-icons-2/512/users_group_people_friends-512.png" />
+                </a>
+            </div>
+            <ul class="nav-links-2">
                 <li><a asp-action="register" asp-controller="account">Register</a></li>
-                <li><a asp-action="login" asp-controller="account">Login</a></li>
-            }
+            </ul>
+            
 
-        </ul>
+            <div class="toggle-button">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    }
 
-        <div class="toggle-button">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </nav>
     <div>
         @RenderBody()
     </div>
