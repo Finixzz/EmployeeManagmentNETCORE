@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
+    outline:none;
 }
 
 body {
@@ -80,7 +81,8 @@ nav {
 .webApp-table td {
     border: 1px solid rgba(0,0,0,0.1);
 }
-.webApp-table {
+.webApp-table,
+.wrapper{
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -181,7 +183,8 @@ p {
     .toggle-button div {
         background-color: rgb(94, 118, 133);
     }
-    .webApp-table {
+    .webApp-table,
+    .wrapper{
         margin-bottom: 20vh;
         width: 90%;
         margin-left: auto;
@@ -221,7 +224,8 @@ p {
 }
 
 @media screen and (max-width:450px){
-    .webApp-table {
+    .webApp-table,
+    .wrapper{
         margin-bottom: 20vh;
         width: 100%;
         margin-left: auto;

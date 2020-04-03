@@ -8,7 +8,7 @@
     var Employees = Model;
 
     <div class="webApp-table">
-        <button class="btn" style="margin-bottom:2%;" onclick="window.location.href='/employee/new'">Add new employee</button>
+        <a class="btn" style="margin-bottom:2%;" asp-action="new" asp-controller="employee">Add new employee</a>
         <table id="employeeTable" class="table table-bordered table-hover">
             <thead>
                 <tr>

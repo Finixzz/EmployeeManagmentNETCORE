@@ -152,3 +152,5 @@ C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\net
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\WebApp.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Administration\CreateRole.cshtml.g.cs
+C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Administration\Index.cshtml.g.cs
