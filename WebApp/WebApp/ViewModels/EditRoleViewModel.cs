@@ -15,7 +15,7 @@ namespace WebApp.ViewModels
         public string RoleName { get; set; }
 
         public List<string> Users { get; set; }
-
+            
 
         public EditRoleViewModel()
         {
