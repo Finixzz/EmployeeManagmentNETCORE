@@ -28,10 +28,15 @@
                 </a>
             </div>
             <ul id="nav-links" class="nav-links">
-                <li><a asp-action="" asp-controller="">Home</a></li>
                 <li><a asp-action="index" asp-controller="employee">Employees</a></li>
                 <li><a asp-action="index" asp-controller="department">Departments</a></li>
-                <li><a asp-action="roles" asp-controller="administration">Roles</a></li>
+                <div class="dropdown">
+                    <a class="dropbtn dropdown-toggle">Manage</a>
+                    <div class="dropdown-content">
+                        <a asp-action="users" asp-controller="administration" >Users</a>
+                        <a asp-action="roles" asp-controller="administration">Roles</a>
+                    </div>
+                </div>
 
             </ul>
             <ul class="nav-links-2">
@@ -61,7 +66,6 @@
                 </a>
             </div>
             <ul id="nav-links" class="nav-links">
-                <li><a asp-action="" asp-controller="">Home</a></li>
                 <li><a asp-action="index" asp-controller="employee">Employees</a></li>
                 <li><a asp-action="index" asp-controller="department">Departments</a></li>
 

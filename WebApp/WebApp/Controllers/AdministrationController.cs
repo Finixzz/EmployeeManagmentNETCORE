@@ -200,6 +200,11 @@ namespace WebApp.Controllers
 
 
 
-
+        [HttpGet]
+        public IActionResult Users()
+        {
+            var users = userManager.Users;
+            return View(users);
+        }
     }
 }

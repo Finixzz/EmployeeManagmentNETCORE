@@ -1,0 +1,26 @@
+﻿@model IEnumerable<WebApp.Models.ApplicationUser>
+@{
+    ViewData["Title"] = "Users";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+
+@{
+    <div class="wrapper">
+        <a class="btn" style="margin-bottom:2%;" asp-action="" asp-controller="">Add new application user</a>
+        @foreach (var user in Model)
+        {
+            <div class="card" style="margin-bottom:2%;">
+                <div class="card-header">
+                    User Id : @user.Id
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@user.Email</h5>
+                    <a asp-action="" asp-controller="" asp-route-id="@user.Id" class="btn ">Edit</a>
+                    <a asp-action="" asp-controller="" class="btn " style="background-color: red;">Delete</a>
+                </div>
+            </div>
+        }
+    </div>
+}
+
