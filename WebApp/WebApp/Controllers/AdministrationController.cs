@@ -99,7 +99,7 @@ namespace WebApp.Controllers
             if (user == null)
             {
                 ViewBag.ErrorMessage = $"user with Id = {id} cannot be found";
-                return View("NotFound");
+                return View("404");
             }
             else
             {
@@ -290,6 +290,35 @@ namespace WebApp.Controllers
             }
 
             return RedirectToAction("EditRole", new { Id = roleId });
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteRole(string id)
+        {
+            var role = await roleManager.FindByIdAsync(id);
+
+
+            if (role == null)
+            {
+                ViewBag.ErrorMessage = $"user with Id = {id} cannot be found";
+                return View("404");
+            }
+            else
+            {
+                var result = await roleManager.DeleteAsync(role);
+
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Roles");
+                }
+
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+                return View("Roles");
+            }
         }
 
     }

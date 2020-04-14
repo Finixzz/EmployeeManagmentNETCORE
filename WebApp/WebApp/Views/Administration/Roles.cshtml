@@ -15,12 +15,18 @@
                     Role Id : @role.Id
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Role Name : @role.Name</h5>
-                    <a asp-action="editrole" asp-controller="administration" asp-route-id="@role.Id" class="btn ">Edit</a>
-                    <a asp-action="" asp-controller="" class="btn " style="background-color: red;">Delete</a>
+                    <form asp-action="DeleteRole" asp-controller="Administration" asp-route-id="@role.Id" method="post">
+                        <h5 class="card-title">Role Name : @role.Name</h5>
+                        <a asp-action="editrole" asp-controller="administration" asp-route-id="@role.Id" class="btn ">Edit</a>
+                        <a class="btn" style="background-color: red; color:white;" onclick="confirmDelete(this)">Delete</a>
+                    </form>
                 </div>
             </div>
         }
     </div>
+}
+
+@section Scripts{ 
+    <script src="~/js/customScript.js"></script>
 }
 

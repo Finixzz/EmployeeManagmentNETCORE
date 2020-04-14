@@ -20,7 +20,7 @@
 
                     <form asp-action="DeleteUser" asp-controller="Administration" asp-route-id="@user.Id" method="post">
                         <a asp-action="EditUser" asp-controller="Administration" asp-route-id="@user.Id" class="btn ">Edit</a>
-                        <button  type="button" class="btn " style="background-color: red;" onclick="confirmDelete(this)">Delete</button>
+                        <a class="btn" style="background-color:red; color:white;" onclick="confirmDelete(this)">Delete</a>
                     </form>
                 </div>
 
