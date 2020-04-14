@@ -301,7 +301,7 @@ namespace WebApp.Controllers
 
             if (role == null)
             {
-                ViewBag.ErrorMessage = $"user with Id = {id} cannot be found";
+                ViewBag.ErrorMessage = $"Role with Id = {id} cannot be found";
                 return View("404");
             }
             else
