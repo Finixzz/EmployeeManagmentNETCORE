@@ -158,3 +158,4 @@ C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\net
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Administration\Roles.cshtml.g.cs
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Administration\Users.cshtml.g.cs
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Administration\EditUser.cshtml.g.cs
+C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
