@@ -46,7 +46,7 @@
         <div class="card" style="margin-bottom:3vh;">
 
             <div class="card-header">
-                <h3>Users in this role</h3>
+                <h3>User Roles</h3>
             </div>
 
             <div class="card-body">
@@ -64,14 +64,14 @@
             </div>
 
             <div class="card-footer">
-                <a asp-action="" asp-controller=""  class="btn" style="color:white;">Manage Roles</a>
+                <a asp-action="ManageUserRoles" asp-route-userId="@Model.Id" asp-controller="Administration" class="btn" style="color:white;">Manage Roles</a>
             </div>
         </div>
 
         <div class="card" style="margin-bottom:3vh;">
 
             <div class="card-header">
-                <h3>Users in this role</h3>
+                <h3>User Claims</h3>
             </div>
 
             <div class="card-body">
@@ -89,7 +89,7 @@
             </div>
 
             <div class="card-footer">
-                <a asp-action="" asp-controller=""  class="btn" style="color:white;">Manage Claims</a>
+                <a asp-action="" asp-controller="" class="btn" style="color:white;">Manage Claims</a>
             </div>
         </div>
 
