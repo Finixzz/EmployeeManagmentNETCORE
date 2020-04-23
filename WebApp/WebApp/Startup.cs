@@ -46,8 +46,15 @@ namespace WebApp
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
 
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("DeleteRolePolicy",
+                    policy => policy.RequireClaim("Delete Role")
+                                    .RequireClaim("Create Role"));
+            });
 
             services.AddScoped<IEmployeeRepository, SQLEmployeeRepository>();
+
             services.AddScoped<IDepartmentRepository, SQLDepartmentRepository>();
 
             services.AddRazorPages();
