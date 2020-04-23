@@ -149,7 +149,6 @@ C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\net
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Edit.cshtml.g.cs
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\_Layout.cshtml.g.cs
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\404.cshtml.g.cs
-C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\WebApp.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Administration\CreateRole.cshtml.g.cs
@@ -161,3 +160,5 @@ C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\net
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Administration\ManageUserRoles.cshtml.g.cs
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Administration\ManageUserClaims.cshtml.g.cs
+C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\WebApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\bin\Debug\netcoreapp3.1\Stripe.net.dll

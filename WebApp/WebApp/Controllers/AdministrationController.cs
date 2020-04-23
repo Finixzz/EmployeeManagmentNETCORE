@@ -209,6 +209,7 @@ namespace WebApp.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy =("DeleteRolePolicy"))]
         public async Task<IActionResult> CreateRole(CreateRoleViewModel model)
         {
             if (ModelState.IsValid)
@@ -234,6 +235,7 @@ namespace WebApp.Controllers
         }
 
         [HttpGet]
+        [Authorize(Policy = "EditRolePolicy")]
         public async Task<IActionResult> EditRole(string id)
         {
             var role = await roleManager.FindByIdAsync(id);
@@ -261,6 +263,7 @@ namespace WebApp.Controllers
 
 
         [HttpPost]
+        [Authorize(Policy ="EditRolePolicy")]
         public async Task<IActionResult> EditRole(EditRoleViewModel model)
         {
             var role = await roleManager.FindByIdAsync(model.Id);

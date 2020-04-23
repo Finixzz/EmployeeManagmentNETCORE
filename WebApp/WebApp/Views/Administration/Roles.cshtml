@@ -1,4 +1,10 @@
 ﻿@model IEnumerable<IdentityRole>
+
+@using Microsoft.AspNetCore.Authorization
+
+@inject IAuthorizationService autohorizationService
+
+
 @{
     ViewData["Title"] = "Roles";
     Layout = "~/Views/_Layout.cshtml";
@@ -7,7 +13,11 @@
 
 @{
     <div class="wrapper">
-        <a class="btn" style="margin-bottom:2%;" asp-action="createrole" asp-controller="administration">Create new role</a>
+        @if ((await autohorizationService.AuthorizeAsync(User, "DeleteRolePolicy")).Succeeded)
+        {
+            <a class="btn" style="margin-bottom:2%;" asp-action="createrole" asp-controller="administration">Create new role</a>
+
+        }
         @foreach (var role in Model)
         {
             <div class="card" style="margin-bottom:2%;">
@@ -17,8 +27,19 @@
                 <div class="card-body">
                     <form asp-action="DeleteRole" asp-controller="Administration" asp-route-id="@role.Id" method="post">
                         <h5 class="card-title">Role Name : @role.Name</h5>
-                        <a asp-action="editrole" asp-controller="administration" asp-route-id="@role.Id" class="btn ">Edit</a>
-                        <a class="btn" style="background-color: red; color:white;" onclick="confirmDelete(this)">Delete</a>
+
+                        @if ((await autohorizationService.AuthorizeAsync(User, "EditRolePolicy")).Succeeded)
+                        {
+                            <a asp-action="editrole" asp-controller="administration" asp-route-id="@role.Id" class="btn ">Edit</a>
+
+                        }
+                        @if ((await autohorizationService.AuthorizeAsync(User, "DeleteRolePolicy")).Succeeded)
+                        {
+
+                            <a class="btn" style="background-color: red; color:white;" onclick="confirmDelete(this)">Delete</a>
+
+                        }
+
                     </form>
                 </div>
             </div>

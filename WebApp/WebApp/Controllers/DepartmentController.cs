@@ -9,6 +9,7 @@ using WebApp.Models.Interfaces;
 
 namespace WebApp.Controllers
 {
+    [Authorize(Roles ="Admin,User")]
     public class DepartmentController : Controller
     {
         private IDepartmentRepository _departmentRepository;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApp.Models;
 using WebApp.Models.Interfaces;
@@ -10,6 +11,7 @@ using WebApp.ViewModels;
 
 namespace WebApp.Controllers
 {
+    [Authorize(Roles = "Admin,User")]
     public class EmployeeController : Controller
     {
         private IEmployeeRepository _employeeRepository;
