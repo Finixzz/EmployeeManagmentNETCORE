@@ -47,6 +47,7 @@ namespace WebApp
             services.AddSingleton(mapper);
 
 
+
             services.ConfigureApplicationCookie(options =>
             {
                 options.AccessDeniedPath = new PathString("/Administration/AccessDenied");
