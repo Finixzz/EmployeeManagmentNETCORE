@@ -57,12 +57,12 @@ namespace WebApp
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("DeleteRolePolicy",
-                    policy => policy.RequireClaim("Delete Role")
-                                    .RequireClaim("Edit Role")
-                                    .RequireClaim("Create Role"));
+                    policy => policy.RequireClaim("Delete Role","true")
+                                    .RequireClaim("Edit Role","true")
+                                    .RequireClaim("Create Role","true"));
 
                 options.AddPolicy("EditRolePolicy",
-                    policy => policy.RequireClaim("Edit Role"));
+                    policy => policy.RequireClaim("Edit Role","true"));
                                   
             });
 
