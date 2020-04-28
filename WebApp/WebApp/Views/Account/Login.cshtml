@@ -4,30 +4,61 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<div class="d-container">
-    <h1 style="margin-left:10%;">User Login</h1>
-    <form method="post" style="padding:30px 0; margin:0 10%;">
-        <div asp-validation-summary="All" class="text-danger"></div>
-        <div class="form-group">
-            <label asp-for="Email">Email</label>
-            <input asp-for="Email" type="email" value="" class="form-control" autocomplete="off" />
-            <span asp-validation-for="Email" class="text-danger"></span>
+    <div class="login-container">
+        <div class="d-container">
+            <h1 style="margin-left:10%;">Local Account Login</h1>
+            <hr />
+            <form method="post" class="login-formater">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Email">Email</label>
+                    <input asp-for="Email" type="email" value="" class="form-control" autocomplete="off" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password">Password</label>
+                    <input asp-for="Password" type="password" value="" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label asp-for="RememberMe">
+                            <input asp-for="RememberMe" />
+                            @Html.DisplayNameFor(m => m.RememberMe)
+                        </label>
+                    </div>
+                </div>
+                <button class="btn" type="submit" style="width:200px;">Login</button>
+            </form>
         </div>
-        <div class="form-group">
-            <label asp-for="Password">Password</label>
-            <input asp-for="Password" type="password" value="" class="form-control" />
-            <span asp-validation-for="Password" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <div class="checkbox">
-                <label asp-for="RememberMe">
-                    <input asp-for="RememberMe" />
-                    @Html.DisplayNameFor(m=>m.RememberMe)
-                </label>
-            </div>
-        </div>
-        <button class="btn" type="submit" style="width:200px;">Login</button>
-    </form>
+        <div class="d-container">
+            <h1 style="margin-left:10%;">External Login</h1>
+            <hr />
+            @{
+                if (Model.ExternalLogins.Count == 0)
+                {
+                    <div>No external logins configured</div>
+                }
+                else
+                {
+                <form class="login-formater" asp-action="ExternalLogin" asp-route-returnUrl="@Model.ReturlUrl">
+                    <div>
+                        @foreach (var provider in Model.ExternalLogins)
+                        {
+                            <button type="submit" class="btn" style="width:200px;"
+                                    name="provider"
+                                    title="Login using your @provider.DisplayName account"
+                                    value="@provider.Name">@provider.Name
+                            </button>
+                        }
+                    </div>
+                </form>
+                    
+                }
+            }
 
-</div>
+
+        </div>
+    </div>
+
 

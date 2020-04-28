@@ -24,11 +24,11 @@
     ".NETCoreApp,Version=v3.1": {
       "WebApp/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Google": "3.1.2",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.2",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.2",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.1",
-          "Stripe.net": "36.5.0",
           "AutoMapper": "9.0.0",
           "datatables.net": "1.10.18",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -327,6 +327,17 @@
         }
       },
       "jQuery/1.12.4": {},
+      "Microsoft.AspNetCore.Authentication.Google/3.1.2": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "assemblyVersion": "3.1.2.0",
+            "fileVersion": "3.100.220.6801"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.2": {
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.Internal.dll": {
@@ -1272,22 +1283,6 @@
           }
         }
       },
-      "Stripe.net/36.5.0": {
-        "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
-          "Newtonsoft.Json": "11.0.2",
-          "System.Configuration.ConfigurationManager": "4.5.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Stripe.net.dll": {
-            "assemblyVersion": "36.5.0.0",
-            "fileVersion": "36.5.0.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/Stripe.net.dll": {}
-        }
-      },
       "System.AppContext/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -1518,9 +1513,6 @@
             "assemblyVersion": "4.0.1.0",
             "fileVersion": "4.6.26515.6"
           }
-        },
-        "compile": {
-          "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
         }
       },
       "System.Console/4.3.0": {
@@ -3854,6 +3846,13 @@
       "path": "jquery/1.12.4",
       "hashPath": "jquery.1.12.4.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Authentication.Google/3.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ziKXE4nTTgK1d1ZWkvc5YYjdarDhI3T59+JaWjq7E7x0sJxnbdi5G1togjmBlgE/lZN95esmVw2rkRSQxdEZmw==",
+      "path": "microsoft.aspnetcore.authentication.google/3.1.2",
+      "hashPath": "microsoft.aspnetcore.authentication.google.3.1.2.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.2": {
       "type": "package",
       "serviceable": true,
@@ -4364,13 +4363,6 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
-    },
-    "Stripe.net/36.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Aj2HtZLUKg8drcAPc5orb6F9F6M0iJO1Q9u6ImXo/rKmzV9gMqwE1soZIoyMsG/2eag/2F4XogzfsnVpzRSKxg==",
-      "path": "stripe.net/36.5.0",
-      "hashPath": "stripe.net.36.5.0.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",

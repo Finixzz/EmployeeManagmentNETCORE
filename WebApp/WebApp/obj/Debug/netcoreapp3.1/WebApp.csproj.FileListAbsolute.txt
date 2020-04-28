@@ -160,5 +160,5 @@ C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\net
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Administration\ManageUserRoles.cshtml.g.cs
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Administration\ManageUserClaims.cshtml.g.cs
+C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll
 C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\obj\Debug\netcoreapp3.1\WebApp.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\450G6\source\repos\EmployeeManagmentNETCORE\WebApp\WebApp\bin\Debug\netcoreapp3.1\Stripe.net.dll
