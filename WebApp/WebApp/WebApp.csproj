@@ -1,24 +1,21 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>769ed424-6e0f-433a-bb6f-6a76ba097a69</UserSecretsId>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Remove="Views\StripeTest\**" />
     <Content Remove="Views\StripeTest\**" />
     <EmbeddedResource Remove="Views\StripeTest\**" />
     <None Remove="Views\StripeTest\**" />
   </ItemGroup>
-
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
-
   <ItemGroup>
     <None Include="..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="automapper" Version="9.0.0" />
     <PackageReference Include="datatables.net" Version="1.10.18" />
@@ -31,5 +28,4 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
   </ItemGroup>
-
 </Project>

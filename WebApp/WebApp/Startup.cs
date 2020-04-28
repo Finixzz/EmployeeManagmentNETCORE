@@ -49,8 +49,11 @@ namespace WebApp
             services.AddAuthentication()
                 .AddGoogle(options =>
                 {
-                    options.ClientId = "1073562649070-01lup14033k2c1tig3e2qvh1262hjsth.apps.googleusercontent.com";
-                    options.ClientSecret = "zQ1C2bcFYbpn-8h6dzL0VnZg";
+                    IConfigurationSection googleAuthNSection =
+                    Configuration.GetSection("Authentication:Google");
+
+                    options.ClientId = googleAuthNSection["ClientId"];
+                    options.ClientSecret = googleAuthNSection["ClientSecret"];
                 });
 
             services.ConfigureApplicationCookie(options =>
