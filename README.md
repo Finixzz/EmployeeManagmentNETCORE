@@ -1,7 +1,7 @@
 ASP NET.core application that covers mvc concepts of real-world enterprise class data driven web applications.
 
 1. Delete migrations folder
-2. To sete instance of your LocalDB, open appsettings.json
+2. To set instance of your LocalDB, open appsettings.json
 "ConnectionStrings": {
     "FactoryDemo": "server=YourLocalDBInstanceName;database=FactoryDemo;Trusted_Connection=true"
   }
