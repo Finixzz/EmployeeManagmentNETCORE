@@ -3,7 +3,7 @@ ASP NET.core application that covers mvc concepts of real-world enterprise class
 1. Delete migrations folder
 2. To set instance of your LocalDB, open appsettings.json
 "ConnectionStrings": {
-    "EmployeeManagmentNETCORE": "server=(localdb)\\MSSQLLocalDB;database=EmployeeManagmentNETCORE;Trusted_Connection=true"
+    "EmployeeManagmentNETCORE": "YourLocalDbInstance;database=EmployeeManagmentNETCORE;Trusted_Connection=true"
   }
 3. Open package manager console, enable migrations, add initial one and update the database 
 
